@@ -1,0 +1,167 @@
+.benefit-card p {
+  margin: 0;
+  color: var(--warm-gray);
+}
+
+@media (max-width: 600px) {
+  .benefit-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.reality-check {
+  padding: clamp(3rem, 8vw, 5rem) 0;
+}
+
+.reality-card {
+  background: #fff;
+  border: 2px dashed var(--mist);
+  border-radius: calc(var(--radius) + 4px);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  box-shadow: inset 0 0 0 6px rgba(247, 244, 239, 0.9);
+}
+
+.reality-card > h2 {
+  margin-bottom: 1.5rem;
+}
+
+.reality-block {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(197, 206, 214, 0.5);
+}
+
+.reality-block:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.reality-block h3 {
+  color: var(--amber-deep);
+  font-size: 1rem;
+  letter-spacing: 0;
+  margin-bottom: 0.65rem;
+}
+
+.reality-block ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--warm-gray);
+}
+
+.reality-block li {
+  margin-bottom: 0.45rem;
+}
+
+.reality-block li:last-child {
+  margin-bottom: 0;
+}
+
+.cta {
+  padding: clamp(3.5rem, 9vw, 6rem) 0;
+  background: var(--charcoal);
+  color: var(--paper);
+}
+
+.cta .section-lead {
+  color: rgba(247, 244, 239, 0.65);
+  margin: 0.75rem auto 0;
+}
+
+.cta-inner {
+  text-align: center;
+  max-width: 560px;
+}
+
+.cta h2 {
+  margin: 0;
+}
+
+.waitlist-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.75rem;
+  justify-content: center;
+}
+
+.waitlist-form input[type="email"] {
+  flex: 1 1 220px;
+  min-width: 0;
+  padding: 0.9rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(197, 206, 214, 0.35);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--paper);
+  font: inherit;
+}
+
+.waitlist-form input::placeholder {
+  color: rgba(247, 244, 239, 0.4);
+}
+
+.waitlist-form input:focus {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+
+.cta .btn-primary {
+  background: var(--amber);
+  color: var(--charcoal);
+}
+
+.cta .btn-primary:hover,
+.cta .btn-primary:focus-visible {
+  background: #e0b46a;
+}
+
+.form-msg {
+  min-height: 1.5rem;
+  margin: 1rem 0 0;
+  font-size: 0.95rem;
+  color: var(--amber);
+}
+
+.form-msg.is-error {
+  color: #e8a0a0;
+}
+
+.waitlist-form.is-success {
+  display: none;
+}
+
+.site-footer {
+  padding: 2rem 0;
+  border-top: 1px solid rgba(197, 206, 214, 0.4);
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.footer-inner p {
+  margin: 0;
+  color: var(--warm-gray);
+  font-size: 0.9rem;
+  max-width: 28rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .frost-layer {
+    transition-duration: 0.01ms !important;
+  }
+  .btn,
+  .remote-shell,
+  .remote-led,
+  .remote-key {
+    transition: none !important;
+  }
+}
