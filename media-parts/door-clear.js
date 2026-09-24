@@ -1,13 +1,2 @@
-/* FogTap rebuild door plate assembler */
-(function(){
-  var parts = window.FOGTAP_DOOR_PARTS || [];
-  var URI = parts.join('');
-  function apply(){
-    document.querySelectorAll('img.door-plate, img.door-blur, img.hero-door-img').forEach(function(img){
-      if (URI) { img.src = URI; img.setAttribute('data-embedded','1'); }
-    });
-  }
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', apply);
-  else apply();
-  window.FOGTAP_DOOR_CLEAR_URI = URI;
-})();
+/* FogTap door plate assembler */
+(function(){var U=(window.__FTD||[]).join('');function a(){document.querySelectorAll('img.door-plate,img.door-blur,img.hero-door-img,[data-door]').forEach(function(i){if(U)i.src=U;});}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',a);else a();})();
