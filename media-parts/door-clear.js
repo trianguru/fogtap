@@ -1,6 +1,7 @@
 (function () {
   var p = window.__FTD || [];
-  var uri = (p[0] || "") + (p[1] || "") + (p[2] || "") + (p[3] || "");
+  var uri = "";
+  for (var i = 0; i < 5; i++) uri += (p[i] || "");
   function apply() {
     document.querySelectorAll("[data-door-src]").forEach(function (el) {
       if (uri) el.setAttribute("src", uri);
