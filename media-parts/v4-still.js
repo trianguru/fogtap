@@ -1,0 +1,1 @@
+window.FOGTAP_ASSETS=window.FOGTAP_ASSETS||{};
