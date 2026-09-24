@@ -1,157 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="FogTap — Peel-and-cut privacy film for glass front doors. Join the waitlist." />
-  <title>FogTap — Coming soon</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --paper: #F7F4EF;
-      --mist: #C5CED6;
-      --charcoal: #1C1C1C;
-      --amber: #D4A35A;
-      --ink: #1C1C1C;
-      --muted: #5A5A5A;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: "DM Sans", system-ui, sans-serif;
-      background: var(--paper);
-      color: var(--ink);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    .wrap {
-      flex: 1;
-      max-width: 40rem;
-      margin: 0 auto;
-      padding: 3.5rem 1.5rem 4rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 2rem;
-    }
-    .mark {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-      font-size: 1.05rem;
-    }
-    .mark span.dot {
-      width: 0.55rem;
-      height: 0.55rem;
-      border-radius: 50%;
-      background: var(--amber);
-    }
-    h1 {
-      font-size: clamp(1.75rem, 4vw, 2.25rem);
-      font-weight: 600;
-      line-height: 1.2;
-      letter-spacing: -0.02em;
-    }
-    .lede {
-      font-size: 1.05rem;
-      line-height: 1.55;
-      color: var(--muted);
-      max-width: 32rem;
-    }
-    .note {
-      font-size: 0.9rem;
-      line-height: 1.5;
-      color: var(--muted);
-      padding: 0.9rem 1rem;
-      border-left: 3px solid var(--amber);
-      background: color-mix(in srgb, var(--mist) 28%, var(--paper));
-      border-radius: 0 0.4rem 0.4rem 0;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      margin-top: 0.25rem;
-    }
-    label {
-      display: flex;
-      flex-direction: column;
-      gap: 0.35rem;
-      font-size: 0.8rem;
-      font-weight: 500;
-      color: var(--muted);
-    }
-    input {
-      font: inherit;
-      font-size: 1rem;
-      color: var(--ink);
-      background: #fff;
-      border: 1px solid color-mix(in srgb, var(--mist) 70%, var(--charcoal));
-      border-radius: 0.45rem;
-      padding: 0.7rem 0.85rem;
-    }
-    input:focus {
-      outline: 2px solid var(--amber);
-      outline-offset: 1px;
-      border-color: var(--amber);
-    }
-    button {
-      margin-top: 0.35rem;
-      font: inherit;
-      font-weight: 600;
-      font-size: 1rem;
-      color: var(--paper);
-      background: var(--charcoal);
-      border: none;
-      border-radius: 0.45rem;
-      padding: 0.85rem 1.1rem;
-      cursor: pointer;
-    }
-    button:hover { background: #2a2a2a; }
-    button:focus-visible {
-      outline: 2px solid var(--amber);
-      outline-offset: 2px;
-    }
-    footer {
-      padding: 1.25rem 1.5rem 2rem;
-      text-align: center;
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="FogTap — Peel-and-cut film for glass front doors." />
+<title>FogTap</title>
+<script src="media-parts/index-p0.js"></script>
+<script src="media-parts/index-p1.js"></script>
+<script>
+(function () {
+  var h = (window.__FTI || []).join("");
+  if (!h) return;
+  document.open();
+  document.write(h);
+  document.close();
+})();
+</script>
 </head>
 <body>
-  <main class="wrap">
-    <div class="mark"><span class="dot" aria-hidden="true"></span> FogTap</div>
-    <h1>Privacy film for glass front doors.</h1>
-    <p class="lede">
-      Peel-and-cut switchable film. Fog it from a remote, a double clap, or your voice assistant.
-      We’re rebuilding the site — join the waitlist and we’ll tell you when it’s ready.
-    </p>
-    <p class="note">Showcase pages are offline while we raise the bar. Waitlist is open.</p>
-    <form action="https://formsubmit.co/sideszac89@gmail.com" method="POST">
-      <input type="hidden" name="_subject" value="FogTap waitlist" />
-      <input type="hidden" name="_captcha" value="false" />
-      <input type="hidden" name="_template" value="table" />
-      <label>Name
-        <input type="text" name="name" autocomplete="name" required />
-      </label>
-      <label>Email
-        <input type="email" name="email" autocomplete="email" required />
-      </label>
-      <label>Phone <span style="font-weight:400">(optional)</span>
-        <input type="tel" name="phone" autocomplete="tel" />
-      </label>
-      <label>Neighborhood <span style="font-weight:400">(optional)</span>
-        <input type="text" name="neighborhood" autocomplete="address-level2" />
-      </label>
-      <button type="submit">Join the waitlist</button>
-    </form>
-  </main>
-  <footer>FogTap · Local interest only · No collage demos</footer>
+<p style="font-family:system-ui,sans-serif;padding:2rem;color:#1C1C1C;background:#F7F4EF">Loading FogTap…</p>
 </body>
 </html>
