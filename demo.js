@@ -176,7 +176,7 @@
   porch.classList.add("is-fogged");
 
   if (veoVideo && doorScene) {
-    var veoSrc = doorScene.getAttribute("data-veo-video") || "media/fogtap-demo-v3.mp4";
+    var veoSrc = doorScene.getAttribute("data-veo-video") || "media/fogtap-demo-v4.mp4";
     fetch(veoSrc, { method: "HEAD" }).then(function (r) {
       if (r.ok) {
         veoVideo.src = veoSrc;
