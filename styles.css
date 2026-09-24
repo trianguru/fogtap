@@ -1,0 +1,63 @@
+:root {
+  --paper: #F7F4EF;
+  --mist: #C5CED6;
+  --charcoal: #1C1C1C;
+  --amber: #D4A35A;
+  --people-img: url("media/people-pair-clear.jpg");
+  --people-fogged: url("media/people-fogged-silhouette.jpg");
+  --door-clear: url("media/door-clear.jpg");
+  --door-fogged: url("media/door-fogged.jpg");
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: var(--paper); color: var(--charcoal); }
+.wrap { width: min(1100px, 92vw); margin: 0 auto; }
+.site-header { padding: 1rem 0; border-bottom: 1px solid var(--mist); }
+.header-inner { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-weight: 700; text-decoration: none; color: inherit; font-size: 1.25rem; }
+.nav a { margin-left: 1rem; text-decoration: none; color: inherit; }
+.nav-cta { color: var(--amber); font-weight: 600; }
+.hero { padding: 3rem 0; }
+.hero-grid { display: grid; gap: 2rem; grid-template-columns: 1.1fr 0.9fr; }
+.eyebrow { text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.75rem; color: #666; }
+h1 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; margin: 0.4rem 0 1rem; }
+.subhead { font-size: 1.1rem; line-height: 1.5; }
+.btn { display: inline-block; padding: 0.75rem 1.25rem; border-radius: 999px; text-decoration: none; border: 1px solid transparent; cursor: pointer; font: inherit; }
+.btn-primary { background: var(--charcoal); color: var(--paper); }
+.btn-ghost { border-color: var(--charcoal); color: var(--charcoal); background: transparent; }
+.local-cta { margin-top: 1rem; font-size: 0.95rem; }
+.hero-door-img, .door-layer, .broll-video { width: 100%; height: auto; display: block; border-radius: 12px; }
+.demo-section, .how, .benefits, .cta { padding: 3rem 0; }
+.section-head { max-width: 40rem; margin-bottom: 1.5rem; }
+.demo-stage { display: grid; gap: 1.25rem; }
+.door-scene { position: relative; }
+.porch-stage { position: relative; overflow: hidden; border-radius: 16px; background: #111; aspect-ratio: 16/9; }
+.door-layer { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 0.85s ease; }
+.door-fogged-img { opacity: 0; }
+.porch-stage.is-fogged .door-fogged-img { opacity: 1; }
+.porch-stage.is-fogged .door-clear { opacity: 0.35; }
+.people-layer { position: absolute; inset: 18% 30% 12% 30%; display: grid; place-items: end center; opacity: 0; transition: opacity 0.85s ease; pointer-events: none; }
+.porch-stage:not(.is-fogged) .people-layer { opacity: 1; }
+.people-photo { width: min(42%, 220px); height: auto; object-fit: cover; border-radius: 8px; }
+.people-silhouette { position: absolute; inset: 0; background-image: var(--people-fogged, var(--people-img)); background-size: contain; background-repeat: no-repeat; background-position: bottom center; filter: blur(6px) brightness(0.35) contrast(0.8); opacity: 0; transition: opacity 0.85s ease; }
+.porch-stage.is-fogged .people-silhouette { opacity: 0.85; }
+.porch-stage.is-fogged .people-photo { opacity: 0; }
+.frost-layer { position: absolute; inset: 0; background: rgba(197,206,214,0.15); opacity: 0; transition: opacity 0.85s ease; pointer-events: none; }
+.porch-stage.is-fogged .frost-layer { opacity: 1; }
+.glass-status { text-align: center; font-weight: 600; }
+.remote-wrap { display: flex; gap: 1rem; align-items: center; justify-content: center; flex-wrap: wrap; }
+.remote-btn { background: none; border: none; padding: 0; }
+.remote-shell { display: grid; gap: 0.5rem; justify-items: center; background: var(--charcoal); color: var(--paper); padding: 1rem 1.25rem; border-radius: 18px; min-width: 140px; }
+.remote-led { width: 10px; height: 10px; border-radius: 50%; background: #444; }
+.remote-led.is-on { background: var(--amber); box-shadow: 0 0 8px var(--amber); }
+.remote-key { background: #333; border-radius: 10px; padding: 0.75rem 1rem; }
+.steps { display: grid; gap: 1rem; padding: 0; list-style: none; }
+.step { background: #fff; border: 1px solid var(--mist); border-radius: 12px; padding: 1rem; }
+.benefit-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+.benefit-card { background: #fff; border: 1px solid var(--mist); border-radius: 12px; padding: 1rem; }
+.cta { background: var(--charcoal); color: var(--paper); }
+.waitlist-form { display: grid; gap: 0.75rem; max-width: 28rem; }
+.waitlist-form input { padding: 0.75rem 1rem; border-radius: 10px; border: 1px solid var(--mist); font: inherit; }
+.cta .btn-primary { background: var(--amber); color: var(--charcoal); }
+.sr-only, .hp-field { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+.site-footer { padding: 2rem 0; border-top: 1px solid var(--mist); }
+@media (max-width: 800px) { .hero-grid { grid-template-columns: 1fr; } }
