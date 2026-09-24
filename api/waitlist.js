@@ -53,17 +53,6 @@ module.exports = async function handler(req, res) {
     } catch (err) {}
   }
 
-  if (process.env.FORMSPREE_FORM_ID) {
-    try {
-      const r = await fetch("https://formspree.io/f/" + process.env.FORMSPREE_FORM_ID, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({ name: name, email: email, phone: phone, neighborhood: neighborhood })
-      });
-      if (r.ok) return res.status(200).json({ ok: true, via: "formspree" });
-    } catch (err) {}
-  }
-
   try {
     const r = await fetch("https://formsubmit.co/ajax/sideszac89@gmail.com", {
       method: "POST",
