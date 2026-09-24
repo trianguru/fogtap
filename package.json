@@ -1,6 +1,9 @@
 {
   "name": "fogtap",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
-  "description": "FogTap landing page — peel-and-cut privacy film for glass front doors"
+  "description": "FogTap landing page — peel-and-cut privacy film for glass front doors",
+  "dependencies": {
+    "@vercel/node": "^3.2.0"
+  }
 }
